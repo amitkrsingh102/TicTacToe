@@ -31,6 +31,7 @@ function main(){
                     return;
                 }
                 DOM_cell[index].innerText = "X";
+                DOM_cell[index].style.textShadow = "-4px 5px 30px white";
                 //Collapse cell and count moves
                 grid[j][i] = human;
                 gridEval[i+j*DIM] = human;
@@ -100,6 +101,8 @@ function main(){
 
             let currCell = document.getElementById(`${changedIndex}`);
             currCell.innerText = "O";
+            currCell.style.textShadow = "-4px 5px 30px white";
+
             moveCounter++;
             eval_WinningCondition(gridEval);
             return moveCounter;
