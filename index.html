@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>TIC-TAC-TOE</title>
+</head>
+
+<body class="bg-slate-600">
+    <!-- DRAW MODAL -->
+    <div id="draw_modal" class="modal h-full w-full place-items-center z-10 hidden fixed opacity-50 bg-blue-700">
+        <div class="modal-content w-2/5 border-5 border-black p-5 mt-80 m-auto bg-white text-2xl rounded-md">
+            <p class="modal-text opacity-100 text-center">DRAW<br>Click anywhere to reset</p>
+        </div>
+    </div>  
+    <!-- LOOSE MODAL -->
+    <div id="lost_modal" class="modal h-full w-full place-items-center z-10 hidden fixed opacity-50 bg-red-700">
+        <div class="modal-content w-2/5 border-1 border-black p-5 mt-80 m-auto bg-white text-2xl rounded-md">
+            <p class="modal-text opacity-100 text-center">YOU LOST<br>Click anywhere to retry</p>
+        </div>
+    </div>
+    <!-- There is no win modal because you cant win LOL -->
+
+    <div class="main grid h-screen place-items-center z-0">
+        <div class="TTTgrid text-7xl text-center items-center text-white">
+            <div class="row flex">
+                <div class="cell pt-7 h-32 w-32 border-b-2 border-r-2 border-white"></div>
+                <div class="cell pt-7 h-32 w-32 border-b-2 border-r-2 border-l-2 border-white"></div>
+                <div class="cell pt-7 h-32 w-32 border-b-2 border-l-2 border-white"></div>
+            </div>
+            <div class="row flex">
+                <div class="cell pt-7 h-32 w-32 border-b-2 border-r-2 border-t-2 border-white"></div>
+                <div class="cell pt-7 h-32 w-32 border-2 border-white"></div>
+                <div class="cell pt-7 h-32 w-32 border-l-2 border-b-2 border-t-2 border-white"></div>
+            </div>
+            <div class="row flex ">
+                <div class="cell pt-7 h-32 w-32 border-t-2 border-r-2 border-white"></div>
+                <div class="cell pt-7 h-32 w-32 border-r-2 border-l-2 border-t-2 border-white"></div>
+                <div class="cell pt-7 h-32 w-32 border-t-2 border-l-2 border-white"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./logic.js"></script>    
+<script src="./app.js"></script>
+</html>
