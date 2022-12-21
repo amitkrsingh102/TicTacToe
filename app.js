@@ -31,7 +31,7 @@ function main(){
                     return;
                 }
                 DOM_cell[index].innerText = "X";
-                DOM_cell[index].style.textShadow = "-4px 5px 30px white";
+                DOM_cell[index].style.textShadow = "-4px 5px 30px rgb(74 222 128)";
                 //Collapse cell and count moves
                 grid[j][i] = human;
                 gridEval[i+j*DIM] = human;
@@ -83,15 +83,7 @@ function main(){
         eval_WinningCondition(gridEval);
 
         //Draw Condition
-        //let DOM_draw_modal = document.getElementById("draw_modal"); 
         if(moveCounter >= 9){
-            // DOM_draw_modal.style.display = "block";
-            // window.addEventListener("click",function(event){
-            //     if (event.target == DOM_draw_modal) {
-            //         DOM_draw_modal.style.display = "none";
-            //         reloadThePage();
-            //     }
-            // })
             drawModalCall();
         }
         if( moveCounter < 9 && moveCounter%2 != 0){
@@ -101,7 +93,7 @@ function main(){
 
             let currCell = document.getElementById(`${changedIndex}`);
             currCell.innerText = "O";
-            currCell.style.textShadow = "-4px 5px 30px white";
+            currCell.style.textShadow = "-4px 5px 30px rgb(248 113 113)";
 
             moveCounter++;
             eval_WinningCondition(gridEval);
